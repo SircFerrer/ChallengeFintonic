@@ -3,6 +3,8 @@ import apiQuestions from "../api/questions"
 import Header from './Header';
 import "../stylesheets/App.scss"
 
+import Body from './Body';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -15,11 +17,12 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    console.log(this.state.questions);
     
     return (
       <div className="App">
       <Header/>
+      <Body questions={this.state.questions}/>
       </div>
     );
   }
