@@ -1,6 +1,7 @@
 import React from 'react';
 import apiQuestions from "./api/questions"
 import './App.css';
+import Header from './components/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class App extends React.Component {
     
     return (
       <div className="App">
-      <h1>Hola Mundo</h1>
+      <Header/>
       </div>
     );
   }
