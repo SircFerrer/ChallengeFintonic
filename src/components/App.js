@@ -1,6 +1,7 @@
 import React from 'react';
-import apiQuestions from "./api/questions"
-import Header from './components/Header';
+import apiQuestions from "../api/questions"
+import Header from './Header';
+import "../stylesheets/App.scss"
 
 class App extends React.Component {
   constructor(props) {

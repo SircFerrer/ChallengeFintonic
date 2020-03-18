@@ -1,0 +1,21 @@
+@import "./core/variables.scss";
+
+.menu{
+    background-color: $darkbluegrey;
+    padding: 2rem 2rem 2rem 2rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    
+    &__btn{
+        font-weight: bold;
+        text-transform: uppercase;
+        color:$white;
+        background-color:$black;
+        border: none;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        margin-right: 1rem;
+        
+    }
+   
+    }
