@@ -1,0 +1,23 @@
+@import "./core/variables.scss";
+
+.pages {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+ 
+  margin-top: 2rem;
+  &__item {
+    color: $white;
+    background-color: $torquoisedark;
+    padding: 1rem 2rem 1rem 2rem;
+    width: 8rem;
+    &__color{
+        color: $white;
+        background-color: $torquoise;
+        padding: 1rem 2rem 1rem 2rem;
+        width: 8rem;
+        text-align: center;
+        
+    }
+  }
+}

@@ -10,7 +10,7 @@ function Question(props) {
       <td className="content">{type}</td>
       <td className="content">{difficulty}</td>
       <td className="content">{question}</td>
-      <td className="content">Cristina</td>
+      <td className="content__color">Cristina</td>
     </>
   );
 }
