@@ -1,13 +1,27 @@
 import React from 'react';
-
+import apiQuestions from "./api/questions"
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-    <h1>Hola Mundo</h1>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      questions:[]
+    }
+  }
+  componentDidMount() {
+    apiQuestions().then(questions => this.setState({ questions }));
+  }
+
+  render() {
+    console.log(this.state);
+    
+    return (
+      <div className="App">
+      <h1>Hola Mundo</h1>
+      </div>
+    );
+  }
 }
 
 export default App;
