@@ -1,6 +1,5 @@
 import React from 'react';
 import apiQuestions from "./api/questions"
-import './App.css';
 import Header from './components/Header';
 
 class App extends React.Component {
