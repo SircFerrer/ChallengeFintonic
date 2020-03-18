@@ -1,30 +1,30 @@
-import React from 'react';
-import Question from './Question';
+import React from "react";
+import Question from "./Question";
+import "../stylesheets/QuestionTable.scss"
 
-function QuestionTable(props){
-    console.log(props.questions);
-    
+function QuestionTable(props) {
+  console.log(props.questions);
 
-    return (
-        <table className="cards">
-            <tr>
-                <th>ID</th>
-                <th>Category</th>
-                <th>Type</th>
-                <th>Difficulty</th>
-                <th>Question/Statement</th>
+  return (
+    <table className="table">
+      <tr className="table__title">
+        <th className="table__title__item">ID</th>
+        <th className="table__title__item">Category</th>
+        <th className="table__title__item">Type</th>
+        <th className="table__title__item">Difficulty</th>
+        <th className="table__title__item">Question/Statement</th>
+        <th className="table__title__item">Created By</th>
+      </tr>
 
-
-            </tr>
-          {props.questions.questions.map(question => {
-            return (
-              <tr className="cards__cardContainer">
-                <Question question={question} />
-              </tr>
-            );
-          })}
-        </table>
-      );
+      {props.questions.questions.map(question => {
+        return (
+          <tr>
+            <Question question={question} />
+          </tr>
+        );
+      })}
+    </table>
+  );
 }
 
 export default QuestionTable;
