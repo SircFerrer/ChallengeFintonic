@@ -11,11 +11,23 @@ class App extends React.Component {
     this.state={
       questions:[]
     }
+    this.getQuestions = this.getQuestions.bind(this);
   }
   componentDidMount() {
-    apiQuestions().then(questions => this.setState({ questions }));
+    this.getQuestions();
+  }
+  getQuestions() {
+    apiQuestions().then(questionsData => {
+      const finalData = questionsData.map((item, index) => {
+        return { ...item, id: index };
+      });
+      this.setState({
+        questions: finalData
+      });
+    });
   }
 
+ 
   render() {
     console.log(this.state.questions);
     

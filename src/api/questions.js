@@ -1,5 +1,5 @@
-export default () => {
-    return fetch("https://opentdb.com/api.php?amount=10")
-      .then(response => response.json())
-      .then(responseData => responseData.results);
+
+  export default () => {
+    return fetch("https://opentdb.com/api.php?amount=10").then(response => response.json());
   };
+  
