@@ -3,7 +3,7 @@ import Question from "./Question";
 import "../stylesheets/QuestionTable.scss"
 
 function QuestionTable(props) {
-  console.log(props.questions);
+  
 
   return (
     <table className="table">
@@ -20,7 +20,7 @@ function QuestionTable(props) {
 
       {props.questions.questions.map(question => {
         return (
-          <tr>
+          <tr key={question.id}>
             <Question question={question} />
           </tr>
         );

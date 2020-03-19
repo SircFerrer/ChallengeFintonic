@@ -6,7 +6,7 @@ import Pages from './Pages';
 
 
 function Body(props){
-    console.log(props);
+    
     
 
     return (
