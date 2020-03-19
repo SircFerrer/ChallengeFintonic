@@ -3,6 +3,7 @@ import apiQuestions from "../api/questions"
 import Header from './Header';
 import "../stylesheets/App.scss"
 import Body from './Body';
+import Filter from './Filter';
 
 
 
@@ -35,6 +36,7 @@ class App extends React.Component {
     return (
       <div className="App">
       <Header/>
+      <Filter/>
       <Body questions={this.state.questions}/>
       </div>
     );

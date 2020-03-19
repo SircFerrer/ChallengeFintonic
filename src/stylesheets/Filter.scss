@@ -1,0 +1,15 @@
+@import "./core/variables.scss";
+
+.filters{
+    font-size: 3rem;
+    background-color: $bluegrey;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+
+    &__input{
+        margin-right: 0.5rem;
+        text-align: center;
+    }
+
+}
