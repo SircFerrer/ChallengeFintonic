@@ -1,0 +1,13 @@
+@import "./core/variables.scss";
+
+.content {
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+  border: $lightgrey 0.2rem solid;
+  height: 3rem;
+  &__color {
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+    border: $lightgrey 0.2rem solid;
+    height: 3rem;
+    color: $torquoisedark;
+  }
+}
