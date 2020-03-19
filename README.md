@@ -31,6 +31,6 @@ The data came without ID so I use a function to add the ID to the data.
 
 #### FOURTH STEP: SECOND BONUS.
 
-Create inputs to filter the questions. I dicided to create three inputs to filter the data. You can filter by type of questios, difficulty or category.
+Create inputs to filter the questions. I decided to create three inputs to filter the data. You can filter by type of questios, difficulty or category.
 
 Thank you for your time.
