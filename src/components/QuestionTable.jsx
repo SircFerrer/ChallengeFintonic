@@ -7,6 +7,8 @@ function QuestionTable(props) {
 
   return (
     <table className="table">
+      <tbody>
+
       <tr className="table__title">
         <th className="table__title__item">ID</th>
         <th className="table__title__item">Category</th>
@@ -23,6 +25,7 @@ function QuestionTable(props) {
           </tr>
         );
       })}
+      </tbody>
     </table>
   );
 }
