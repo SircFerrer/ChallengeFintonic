@@ -11,9 +11,15 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      questions:[]
+      questions:[],
+      searchCategory:"",
+      searchType:"",
+      searchDif:""
     }
     this.getQuestions = this.getQuestions.bind(this);
+    this.handleSearchCategory = this.handleSearchCategory.bind(this);
+    this.handleSearchType = this.handleSearchType.bind(this);
+    this.handleSearchDif = this.handleSearchDif.bind(this);
   }
   componentDidMount() {
     this.getQuestions();
@@ -29,15 +35,56 @@ class App extends React.Component {
     });
   }
 
- 
+  handleSearchCategory(data) {
+    this.setState({
+      searchCategory: data.value
+    });
+  }
+  handleSearchType(data) {
+    this.setState({
+      searchType: data.value
+    });
+  }
+  handleSearchDif(data) {
+    this.setState({
+      searchDif: data.value
+    });
+  }
+
+  filterQuestions() {
+    return this.state.questions
+
+      .filter(question => {
+        return question.category
+          .toLowerCase()
+          .includes(this.state.searchCategory.toLowerCase());
+      })
+      .filter(question => {
+        return question.type
+          .includes(this.state.searchType.toLowerCase());
+      })
+      .filter(question => {
+        return question.difficulty
+          .includes(this.state.searchDif.toLowerCase());
+      })
+
+
+  }
   render() {
     
     
     return (
       <div className="App">
       <Header/>
-      <Filter/>
-      <Body questions={this.state.questions}/>
+      <Filter 
+      handleSearchCategory={this.handleSearchCategory} 
+      searchCategory={this.state.searchCategory}
+      handleSearchType={this.handleSearchType}
+      searchType={this.state.searchType}
+      handleSearchDif={this.handleSearchDif}
+      searchDif={this.state.searchDif}
+      />
+      <Body questions={this.filterQuestions()}/>
       </div>
     );
   }
